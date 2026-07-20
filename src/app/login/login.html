@@ -1,5 +1,9 @@
-<h1 style="color: orange;">{{count}}</h1>
-<button (click)="callLogin('minus')"> - </button>
-<span>  {{count}}  </span>
-<button (click)="callLogin('plus')"> + </button>
 <input type="text" (input)="handelEvent($event.target.value)" />
+<input type="text" (change)="handelEvent($event.target.value)" />
+<button (click)="handelEvent('Button Clicked')">Click Me</button>
+<select (change)="handelEvent($event.type)">
+  <option value="Option 1">Option 1</option>
+  <option value="Option 2">Option 2</option>
+  <option value="Option 3">Option 3</option>
+</select>
+<input type="text"  (blur)="handelEvent($event.type)" />
