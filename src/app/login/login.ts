@@ -22,4 +22,8 @@ this.count++;
   alertCount() {
     alert(`Current count is not leess than 0: ${this.count}`);
   }
+
+  handelEvent(event: String) {
+    console.log('Event:', event);
+  }
 }
