@@ -1,9 +1,15 @@
 <input type="text" (input)="handelEvent($event.target.value)" />
-<input type="text" (change)="handelEvent($event.target.value)" />
-<button (click)="handelEvent('Button Clicked')">Click Me</button>
+ <input type="text" (change)="handelEvent($event.target.value)" />
 <select (change)="handelEvent($event.type)">
   <option value="Option 1">Option 1</option>
   <option value="Option 2">Option 2</option>
   <option value="Option 3">Option 3</option>
 </select>
-<input type="text"  (blur)="handelEvent($event.type)" />
+<input type="text" (blur)="handelEvent($event.type)" />
+<input type="text" (focus)="handelEvent($event.type)" />
+<div (mouseleave)="handelEvent($event.type)" class="div1">
+
+</div>
+<div (mouseenter)="handelEvent($event.type)" class="div2">
+    
+</div>

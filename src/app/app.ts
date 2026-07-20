@@ -1,11 +1,12 @@
 import { Component, signal } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { Login } from "./login/login";
-import { Signup } from "./signup/signup"; 
+import { Signup } from "./signup/signup";
+import { Signal } from "./signal/signal"; 
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, Login, Signup],
+  imports: [RouterOutlet, Login, Signup, Signal],
   templateUrl: './app.html',
   /*template: `
   <h1>{{name}}</h1>
@@ -20,5 +21,10 @@ export class App {
   name = 'Angular 21';
   getAddition(a:number, b:number): number {
     return a + b;
+  }
+
+  number = 10;
+   showEvent(event: MouseEvent | PointerEvent | Event) {
+    console.log('Event:', event);
   }
 }

@@ -1,3 +1,11 @@
-h1{
-    color: red;
+.div1{
+    background-color: red;
+    width: 100px;
+    height: 100px;
+}
+
+.div2{
+    background-color: blue;
+    width: 100px;
+    height: 100px;
 }
