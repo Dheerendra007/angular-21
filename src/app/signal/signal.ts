@@ -22,6 +22,7 @@ export class Signal {
 
   signalCounter() {
     this.count.set(this.count() + 1)
+    console.log('Count Signal:', this.count())
   }
   
 }
