@@ -4,11 +4,12 @@ import { Login } from "./login/login";
 import { Signup } from "./signup/signup";
 import { Signal } from "./signal/signal";
 import { Signaldatatype } from "./signaldatatype/signaldatatype";
-import { Counterapp } from "./counterapp/counterapp"; 
+import { Counterapp } from "./counterapp/counterapp";
+import { Getsetinput } from "./getsetinput/getsetinput"; 
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, Login, Signup, Signal, Signaldatatype, Counterapp],
+  imports: [RouterOutlet, Login, Signup, Signal, Signaldatatype, Counterapp, Getsetinput],
   templateUrl: './app.html',
   /*template: `
   <h1>{{name}}</h1>
