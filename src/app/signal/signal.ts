@@ -9,11 +9,20 @@ import { Component, effect, signal } from '@angular/core';
 export class Signal {
   data = 10
   count = signal(10)
+  speed = signal(0)
+  color = "red"
 
   constructor() {
   effect(() => {
     console.log('Count Signal:', this.count())
     console.log('Count data:', this.data)
+    console.log('Speed Signal:', this.speed())
+    if (this.speed() > 50) {
+      this.color = "green"
+    } else {
+      this.color = "red"
+    }
+    console.log('speed:', this.speed())
   });
   }
   dataCounter() {
@@ -24,5 +33,9 @@ export class Signal {
     this.count.set(this.count() + 1)
     console.log('Count Signal:', this.count())
   }
-  
+
+  updateSpeed() {
+    this.speed.set(this.speed() + 10)
+  }
+
 }
