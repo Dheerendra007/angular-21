@@ -1,0 +1,92 @@
+/* Center the card */
+:host {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #f4f4f4;
+}
+
+/* Main Container */
+.counter-container {
+  width: 700px;
+  max-width: 90%;
+  background-color: #ffffff;
+  padding: 50px;
+  border-radius: 25px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+/* Heading */
+h1 {
+  margin: 0;
+  font-size: 56px;
+  font-weight: 700;
+  color: #333;
+}
+
+/* Counter Value */
+h2 {
+  margin: 50px 0;
+  font-size: 120px;
+  color: #2f80ed;
+  font-weight: 700;
+}
+
+/* Buttons Container */
+.btn-group {
+  display: flex;
+  justify-content: center;
+  gap: 40px; 
+}
+
+/* Common Button Style */
+.btn {
+  width: 220px;
+  height: 80px;
+  border: none;
+  border-radius: 18px;
+  font-size: 42px;
+  font-weight: 600;
+  cursor: pointer;
+  background-color: #4285f4;
+  color: white;
+  transition: 0.3s ease;
+}
+
+/* Hover Effect */
+.btn:hover {
+  transform: translateY(-2px);
+  opacity: 0.95;
+}
+
+/* Reset Button */
+.reset-btn {
+  background-color: #bdbdbd;
+  font-size: 30px;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .counter-container {
+    padding: 30px;
+  }
+
+  h1 {
+    font-size: 38px;
+  }
+
+  h2 {
+    font-size: 80px;
+  }
+
+  .btn-group {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .btn {
+    width: 100%;
+  }
+}

@@ -3,11 +3,12 @@ import { RouterOutlet } from '@angular/router';
 import { Login } from "./login/login";
 import { Signup } from "./signup/signup";
 import { Signal } from "./signal/signal";
-import { Signaldatatype } from "./signaldatatype/signaldatatype"; 
+import { Signaldatatype } from "./signaldatatype/signaldatatype";
+import { Counterapp } from "./counterapp/counterapp"; 
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, Login, Signup, Signal, Signaldatatype],
+  imports: [RouterOutlet, Login, Signup, Signal, Signaldatatype, Counterapp],
   templateUrl: './app.html',
   /*template: `
   <h1>{{name}}</h1>
