@@ -5,11 +5,12 @@ import { Signup } from "./signup/signup";
 import { Signal } from "./signal/signal";
 import { Signaldatatype } from "./signaldatatype/signaldatatype";
 import { Counterapp } from "./counterapp/counterapp";
-import { Getsetinput } from "./getsetinput/getsetinput"; 
+import { Getsetinput } from "./getsetinput/getsetinput";
+import { Styling } from "./styling/styling"; 
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, Login, Signup, Signal, Signaldatatype, Counterapp, Getsetinput],
+  imports: [RouterOutlet, Login, Signup, Signal, Signaldatatype, Counterapp, Getsetinput, Styling],
   templateUrl: './app.html',
   /*template: `
   <h1>{{name}}</h1>
