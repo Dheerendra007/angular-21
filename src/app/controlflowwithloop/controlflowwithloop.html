@@ -5,4 +5,15 @@
     <li>{{item}}</li>
    }
    </ul>
+   <hr/>
+   <ul>
+    @for(userdetails of userDetails(); track userdetails.id){
+         <li [style.background-color]="$odd ? 'red' : 'green'"><span>{{($index+1)+" "+userdetails.name + "= Email : " + userdetails.emil}}
+            @if($first){<span style="color: green;">Admin</span>}
+        @if($last){<span style="color: red;">Sub Admin</span>}
+         </span>
+
+         </li>
+    }
+   </ul>
 </div>
