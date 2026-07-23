@@ -7,11 +7,12 @@ import { Signaldatatype } from "./signaldatatype/signaldatatype";
 import { Counterapp } from "./counterapp/counterapp";
 import { Getsetinput } from "./getsetinput/getsetinput";
 import { Styling } from "./styling/styling";
-import { Controlflowstatement } from "./controlflowstatement/controlflowstatement"; 
+import { Controlflowstatement } from "./controlflowstatement/controlflowstatement";
+import { Controlflowwithloop } from "./controlflowwithloop/controlflowwithloop"; 
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, Login, Signup, Signal, Signaldatatype, Counterapp, Getsetinput, Styling, Controlflowstatement],
+  imports: [RouterOutlet, Login, Signup, Signal, Signaldatatype, Counterapp, Getsetinput, Styling, Controlflowstatement, Controlflowwithloop],
   templateUrl: './app.html',
   /*template: `
   <h1>{{name}}</h1>
