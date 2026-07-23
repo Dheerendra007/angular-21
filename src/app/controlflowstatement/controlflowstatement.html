@@ -1,1 +1,34 @@
-<p>controlflowstatement works!</p>
+<div >
+  @if (isLoggedIn()) {
+    <span>Welcome User</span>
+    <button (click)="handelLogin(false)">Log out</button>
+  }@else {
+    <span>Please log in</span>
+    <button (click)="handelLogin(true)">Log in</button>
+  }
+</div>
+<hr />
+<h1> Toggle </h1>
+@if (isStatus()) {
+    <button (click)="isStatus.set(false)">Hide</button>
+}@else{
+ <button (click)="isStatus.set(true)">Show</button>
+}
+<hr />
+<h1>Check Status</h1>
+@if (statusStr() == "Not started") {
+<span>Not started</span>
+}@else if (statusStr() == "Progress") {
+<span style="color: orange;">Progress</span>
+}@else if (statusStr() == "Active") {
+<span style="color: green;">Active</span>
+}@else if (statusStr() == "Stop") {
+<span style="color: red;">Stop</span>
+}
+<hr />
+<select (change)="handleStatus($event)">
+ <option value="Not started">Not started</option>
+  <option value="Progress">Progress</option>
+   <option value="Active">Active</option>
+    <option value="Stop">Stop</option>
+</select>
