@@ -1,1 +1,16 @@
-<p>twowaydatabinding works!</p>
+<h1>{{name()}}</h1>
+<input type="text" [value]="name()" (input)="name.set($event.target.value)">
+<hr/>
+<h2>{{userData().username}}</h2>
+<input type="text" [value]="userData().username" 
+(input)="updateUser('username',$event.target.value)">
+
+
+<hr/>
+<h2>{{userData().age}}</h2>
+<input type="text" [value]="userData().age" 
+(input)="updateUser('age',$event.target.value)">
+<hr/>
+<h2>{{userData().email}}</h2>
+<input type="text" [value]="userData().email" 
+(input)="updateUser('email',$event.target.value)">
