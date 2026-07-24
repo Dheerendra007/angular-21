@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, signal } from '@angular/core';
 
 @Component({
   selector: 'app-switchstatement',
@@ -6,4 +6,11 @@ import { Component } from '@angular/core';
   templateUrl: './switchstatement.html',
   styleUrl: './switchstatement.css',
 })
-export class Switchstatement {}
+export class Switchstatement {
+  status = signal('success');
+  handelStatus(event:Event){
+    const target = event.target as HTMLSelectElement
+    this.status.set(target.value)
+
+  }
+}

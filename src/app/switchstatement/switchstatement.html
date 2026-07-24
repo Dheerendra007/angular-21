@@ -1,1 +1,23 @@
-<p>switchstatement works!</p>
+<h1> Welcome to switch stetment</h1>
+<select (change)="handelStatus($event)">
+    <option value="not started">Not started</option>
+    <option value="in progress">In Progress</option>
+    <option value="success">Sucess</option>
+    <option value="error">Error</option>
+</select>
+<br/>
+<br/>
+@switch (status()) {
+    @case ('not started') {
+        <span>Not started</span>
+    }
+    @case ('in progress') {
+        <span style="color: orange;">In Progress</span>
+    }
+    @case ('success') {
+        <span style="color: green;">Sucess</span>
+    }
+    @default {
+        <span style="color: red;">Error</span>
+    }
+}
