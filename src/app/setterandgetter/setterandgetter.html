@@ -1,0 +1,7 @@
+<h1>{{uName}}</h1>
+
+<input
+  type="text"
+  [value]="uName"
+  (input)="uName = $event.target.value"
+/>
