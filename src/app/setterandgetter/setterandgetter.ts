@@ -1,4 +1,5 @@
 import { Component, signal } from '@angular/core';
+import { UserData } from '../styling/user-data/user-data';
 
 @Component({
   selector: 'app-setterandgetter',
@@ -8,6 +9,7 @@ import { Component, signal } from '@angular/core';
 })
 export class Setterandgetter {
   userName = signal("Dheerendra")
+  userData = signal({colloage:"abc",email:"dk@test.com"})
 
   set uName(name:string){
     this.userName.set(name);
@@ -15,5 +17,13 @@ export class Setterandgetter {
 
   get uName(){
     return this.userName();
+}
+
+ get studentClg(){
+  return this.userData().colloage;
+}
+
+set studentClg(studentCollage){
+  this.userData.update((item)=>({...item,colloage:studentCollage }));
 }
 }
