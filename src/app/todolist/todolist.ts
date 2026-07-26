@@ -11,11 +11,18 @@ import { Title } from '@angular/platform-browser';
 export class Todolist {
   titel = signal('')
   tasks = signal([
-    {id: 0, title:"Team lunch", completed:false}
+    { id: 0, title: "Team lunch", completed: false }
   ])
 
-  addTask(event:Event){
-    val = event.target as HttpInterceptor
-    this.tasks.update(event.target)
+  addTask() {
+    if (this.titel())
+      this.tasks.update((item) => (
+        [...item, { id: this.tasks().length, title: this.titel(), completed: false }]
+      ))
+    this.titel.set('');
+  }
+
+  deleteTask(id: number) {
+    this.tasks.update((tasks) => tasks.filter((task) => task.id != id))
   }
 }

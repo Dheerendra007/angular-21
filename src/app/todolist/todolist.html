@@ -1,12 +1,18 @@
 <h1>To-Do List</h1>
-<input type="text" (input)="titel.set($event.target.value)" placeholder="Enter task">
-<button>Add task</button>
-@for (item of tasks(); track item.id) {
+<input type="text"  [value]="titel()"   (input)="titel.set($event.target.value)" placeholder="Enter task">
+<button (click)="addTask()">Add task</button>
     <ul>
+        @for (item of tasks(); track item.id) {
        <li class="task-style">
-        <span>{{$index+1}}</span><span >{{item.title}}</span><button>Delete  </button>
+        <span>{{$index+1}}</span>
+        <span >{{item.title}}</span>
+        <button (click)="deleteTask(item.id)">Delete  </button>
         
        </li>
+       }
+       @empty {<span>No Task</span>}
     </ul>
    
-}
+
+ 
+
