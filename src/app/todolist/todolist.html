@@ -1,0 +1,12 @@
+<h1>To-Do List</h1>
+<input type="text" (input)="titel.set($event.target.value)" placeholder="Enter task">
+<button>Add task</button>
+@for (item of tasks(); track item.id) {
+    <ul>
+       <li class="task-style">
+        <span>{{$index+1}}</span><span >{{item.title}}</span><button>Delete  </button>
+        
+       </li>
+    </ul>
+   
+}

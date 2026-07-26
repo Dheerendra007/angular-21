@@ -11,11 +11,12 @@ import { Controlflowstatement } from "./controlflowstatement/controlflowstatemen
 import { Controlflowwithloop } from "./controlflowwithloop/controlflowwithloop";
 import { Switchstatement } from "./switchstatement/switchstatement";
 import { Twowaydatabinding } from "./twowaydatabinding/twowaydatabinding";
-import { Setterandgetter } from "./setterandgetter/setterandgetter"; 
+import { Setterandgetter } from "./setterandgetter/setterandgetter";
+import { Todolist } from "./todolist/todolist"; 
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, Login, Signup, Signal, Signaldatatype, Counterapp, Getsetinput, Styling, Controlflowstatement, Controlflowwithloop, Switchstatement, Twowaydatabinding, Setterandgetter],
+  imports: [RouterOutlet, Login, Signup, Signal, Signaldatatype, Counterapp, Getsetinput, Styling, Controlflowstatement, Controlflowwithloop, Switchstatement, Twowaydatabinding, Setterandgetter, Todolist],
   templateUrl: './app.html',
   /*template: `
   <h1>{{name}}</h1>
