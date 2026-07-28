@@ -13,11 +13,12 @@ import { Switchstatement } from "./switchstatement/switchstatement";
 import { Twowaydatabinding } from "./twowaydatabinding/twowaydatabinding";
 import { Setterandgetter } from "./setterandgetter/setterandgetter";
 import { Todolist } from "./todolist/todolist";
-import { Directives } from "./directives/directives"; 
+import { Directives } from "./directives/directives";
+import { Parentcomponent } from "./parentcomponent/parentcomponent"; 
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, Login, Signup, Signal, Signaldatatype, Counterapp, Getsetinput, Styling, Controlflowstatement, Controlflowwithloop, Switchstatement, Twowaydatabinding, Setterandgetter, Todolist, Directives],
+  imports: [RouterOutlet, Login, Signup, Signal, Signaldatatype, Counterapp, Getsetinput, Styling, Controlflowstatement, Controlflowwithloop, Switchstatement, Twowaydatabinding, Setterandgetter, Todolist, Directives, Parentcomponent],
   templateUrl: './app.html',
   /*template: `
   <h1>{{name}}</h1>
