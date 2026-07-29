@@ -8,4 +8,9 @@ import { Component, Input } from '@angular/core';
 })
 export class Childcomponent {
   @Input() userName:string|undefined
+
+  whichUser(name:string|undefined){
+    console.log(name);
+    
+  }
 }
