@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-childcomponent',
@@ -6,4 +6,6 @@ import { Component } from '@angular/core';
   templateUrl: './childcomponent.html',
   styleUrl: './childcomponent.css',
 })
-export class Childcomponent {}
+export class Childcomponent {
+  @Input() userName:string|undefined
+}

@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, signal } from '@angular/core';
 import { Childcomponent } from './childcomponent/childcomponent';
 
 @Component({
@@ -7,4 +7,6 @@ import { Childcomponent } from './childcomponent/childcomponent';
   templateUrl: './parentcomponent.html',
   styleUrl: './parentcomponent.css',
 })
-export class Parentcomponent {}
+export class Parentcomponent {
+  users = signal(['Dheerendra','danial','peter','stark'])
+}

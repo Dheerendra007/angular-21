@@ -1,2 +1,4 @@
-<p>parentcomponent works!</p>
-<app-childcomponent></app-childcomponent>
+
+@for (user of users(); track user) {
+    <app-childcomponent [userName]="user"></app-childcomponent>
+}
