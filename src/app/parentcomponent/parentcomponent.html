@@ -1,6 +1,9 @@
-
+<h1> Selected User is {{selectedUserName()}}</h1>
 <input type="text" (input)="userInput.set($event.target.value)" placeholder="Enter user name">
 <button (click)="addNewUser()">Add User</button>
 @for (user of users(); track user) {
-    <app-childcomponent [userName]="user"></app-childcomponent>
+    <app-childcomponent [userName]="user"
+    (selectedUser)="selectedUser($event)"
+    (deleteUser)="deleteUser($event)"
+    ></app-childcomponent>
 }
