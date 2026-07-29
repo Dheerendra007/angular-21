@@ -8,5 +8,9 @@ import { Childcomponent } from './childcomponent/childcomponent';
   styleUrl: './parentcomponent.css',
 })
 export class Parentcomponent {
-  users = signal(['Dheerendra','danial','peter','stark'])
+  users = signal(['Dheerendra','danial','peter','stark']);
+  userInput = signal("enter name");
+  addNewUser(){
+    this.users.update((data)=>([...data,this.userInput()]))
+  }
 }
