@@ -22,13 +22,14 @@ import { TrimTextPipePipe } from './custom-pipe/trim-text-pipe-pipe';
 import { Home } from './pages/home/home';
 import { Profile } from './pages/profile/profile';
 import { About } from './pages/about/about';
+import { Header } from "./components/header/header";
 
 @Component({
   selector: 'app-root',
   imports: [RouterOutlet, Login, Signup, Signal, Signaldatatype,
     Counterapp, Getsetinput, Styling, Controlflowstatement, Controlflowwithloop,
     Switchstatement, Twowaydatabinding, Setterandgetter, Todolist, Directives,
-    Parentcomponent, DisplayCount, ControlCount, Pipe, Home, Login, Profile, About, RouterLinkWithHref],
+    Parentcomponent, DisplayCount, ControlCount, Pipe, Home, Login, Profile, About, RouterLinkWithHref, Header],
   templateUrl: './app.html',
   /*template: `
   <h1>{{name}}</h1>

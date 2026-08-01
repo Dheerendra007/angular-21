@@ -1,0 +1,16 @@
+.header{
+    background-color: #f1f1f1;
+    display: flex;
+    
+}
+.header h1{
+    margin: 0;
+    font-size: 24px;
+}
+.header ul{
+    list-style-type: none;
+    display: flex;
+}
+.header ul li{
+    padding: 5px 10px;
+}
