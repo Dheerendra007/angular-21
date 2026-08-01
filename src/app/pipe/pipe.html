@@ -4,3 +4,6 @@
 <input type="text" (input)="username.set($event.target.value)">
 <h3>{{amount() | currency:'USD'}}</h3>
 <h3>{{date() | date:'short'}}</h3>
+<hr>
+<h1>Custome Pipe</h1>
+<h2>{{'hi dheerendra' | trimTextPipe | uppercase}}</h2>

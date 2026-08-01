@@ -18,6 +18,7 @@ import { Parentcomponent } from "./parentcomponent/parentcomponent";
 import { DisplayCount } from "./display-count/display-count";
 import { ControlCount } from "./control-count/control-count";
 import { Pipe } from "./pipe/pipe"; 
+import { TrimTextPipePipe } from './custom-pipe/trim-text-pipe-pipe';
 
 @Component({
   selector: 'app-root',

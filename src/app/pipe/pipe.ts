@@ -1,9 +1,10 @@
 import { CurrencyPipe, DatePipe, TitleCasePipe, UpperCasePipe } from '@angular/common';
 import { Component, signal } from '@angular/core';
+import { TrimTextPipePipe } from '../custom-pipe/trim-text-pipe-pipe';
 
 @Component({
   selector: 'app-pipe',
-  imports: [UpperCasePipe,TitleCasePipe,CurrencyPipe,DatePipe],
+  imports: [UpperCasePipe,TitleCasePipe,CurrencyPipe,DatePipe,TrimTextPipePipe],
   templateUrl: './pipe.html',
   styleUrl: './pipe.css',
 })
