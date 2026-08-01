@@ -1,9 +1,15 @@
-import { Component } from '@angular/core';
+import { CurrencyPipe, DatePipe, TitleCasePipe, UpperCasePipe } from '@angular/common';
+import { Component, signal } from '@angular/core';
 
 @Component({
   selector: 'app-pipe',
-  imports: [],
+  imports: [UpperCasePipe,TitleCasePipe,CurrencyPipe,DatePipe],
   templateUrl: './pipe.html',
   styleUrl: './pipe.css',
 })
-export class Pipe {}
+export class Pipe {
+  name = signal("hi this is dheerendra")
+  username = signal("Dheerendra")
+  amount = signal(1000)
+   date = signal(new Date)
+}

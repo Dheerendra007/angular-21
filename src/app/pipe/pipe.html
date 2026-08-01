@@ -1,1 +1,6 @@
-<p>pipe works!</p>
+<h1>{{name() | uppercase}}</h1>
+<h2>{{name() | titlecase}}</h2>
+<h3>{{username() | titlecase}}</h3>
+<input type="text" (input)="username.set($event.target.value)">
+<h3>{{amount() | currency:'USD'}}</h3>
+<h3>{{date() | date:'short'}}</h3>
