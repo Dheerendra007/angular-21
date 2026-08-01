@@ -14,11 +14,13 @@ import { Twowaydatabinding } from "./twowaydatabinding/twowaydatabinding";
 import { Setterandgetter } from "./setterandgetter/setterandgetter";
 import { Todolist } from "./todolist/todolist";
 import { Directives } from "./directives/directives";
-import { Parentcomponent } from "./parentcomponent/parentcomponent"; 
+import { Parentcomponent } from "./parentcomponent/parentcomponent";
+import { DisplayCount } from "./display-count/display-count";
+import { ControlCount } from "./control-count/control-count"; 
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, Login, Signup, Signal, Signaldatatype, Counterapp, Getsetinput, Styling, Controlflowstatement, Controlflowwithloop, Switchstatement, Twowaydatabinding, Setterandgetter, Todolist, Directives, Parentcomponent],
+  imports: [RouterOutlet, Login, Signup, Signal, Signaldatatype, Counterapp, Getsetinput, Styling, Controlflowstatement, Controlflowwithloop, Switchstatement, Twowaydatabinding, Setterandgetter, Todolist, Directives, Parentcomponent, DisplayCount, ControlCount],
   templateUrl: './app.html',
   /*template: `
   <h1>{{name}}</h1>

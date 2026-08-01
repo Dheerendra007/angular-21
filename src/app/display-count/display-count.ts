@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Counter } from '../store/counter';
 
 @Component({
   selector: 'app-display-count',
@@ -6,4 +7,6 @@ import { Component } from '@angular/core';
   templateUrl: './display-count.html',
   styleUrl: './display-count.css',
 })
-export class DisplayCount {}
+export class DisplayCount {
+  constructor(public state:Counter){}
+}

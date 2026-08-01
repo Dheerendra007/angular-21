@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Counter } from '../store/counter';
 
 @Component({
   selector: 'app-control-count',
@@ -6,4 +7,6 @@ import { Component } from '@angular/core';
   templateUrl: './control-count.html',
   styleUrl: './control-count.css',
 })
-export class ControlCount {}
+export class ControlCount {
+  constructor(public state:Counter){}
+}
