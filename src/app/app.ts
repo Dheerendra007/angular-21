@@ -16,11 +16,12 @@ import { Todolist } from "./todolist/todolist";
 import { Directives } from "./directives/directives";
 import { Parentcomponent } from "./parentcomponent/parentcomponent";
 import { DisplayCount } from "./display-count/display-count";
-import { ControlCount } from "./control-count/control-count"; 
+import { ControlCount } from "./control-count/control-count";
+import { Pipe } from "./pipe/pipe"; 
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, Login, Signup, Signal, Signaldatatype, Counterapp, Getsetinput, Styling, Controlflowstatement, Controlflowwithloop, Switchstatement, Twowaydatabinding, Setterandgetter, Todolist, Directives, Parentcomponent, DisplayCount, ControlCount],
+  imports: [RouterOutlet, Login, Signup, Signal, Signaldatatype, Counterapp, Getsetinput, Styling, Controlflowstatement, Controlflowwithloop, Switchstatement, Twowaydatabinding, Setterandgetter, Todolist, Directives, Parentcomponent, DisplayCount, ControlCount, Pipe],
   templateUrl: './app.html',
   /*template: `
   <h1>{{name}}</h1>
