@@ -1,5 +1,5 @@
 import { Component, signal } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { RouterOutlet, RouterLinkWithHref } from '@angular/router';
 import { Login } from "./login/login";
 import { Signup } from "./signup/signup";
 import { Signal } from "./signal/signal";
@@ -19,10 +19,16 @@ import { DisplayCount } from "./display-count/display-count";
 import { ControlCount } from "./control-count/control-count";
 import { Pipe } from "./pipe/pipe"; 
 import { TrimTextPipePipe } from './custom-pipe/trim-text-pipe-pipe';
+import { Home } from './pages/home/home';
+import { Profile } from './pages/profile/profile';
+import { About } from './pages/about/about';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, Login, Signup, Signal, Signaldatatype, Counterapp, Getsetinput, Styling, Controlflowstatement, Controlflowwithloop, Switchstatement, Twowaydatabinding, Setterandgetter, Todolist, Directives, Parentcomponent, DisplayCount, ControlCount, Pipe],
+  imports: [RouterOutlet, Login, Signup, Signal, Signaldatatype,
+    Counterapp, Getsetinput, Styling, Controlflowstatement, Controlflowwithloop,
+    Switchstatement, Twowaydatabinding, Setterandgetter, Todolist, Directives,
+    Parentcomponent, DisplayCount, ControlCount, Pipe, Home, Login, Profile, About, RouterLinkWithHref],
   templateUrl: './app.html',
   /*template: `
   <h1>{{name}}</h1>
