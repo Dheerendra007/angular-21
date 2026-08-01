@@ -14,3 +14,11 @@
 .header ul li{
     padding: 5px 10px;
 }
+.header ul li a{
+    text-decoration: none;
+    color: #333;
+}
+.active{
+    font-weight: bold;
+    color: #007bff;
+} 
