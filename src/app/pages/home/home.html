@@ -11,3 +11,13 @@
   [queryParams]="{ name: 'Sam Doe', age: 34, id: 2 }">
   Go to Sam's Profile
 </a>
+<hr>
+<a
+  routerLink="/about/anil">
+  Go to Anil's About Page
+</a>
+<br>
+<a
+  [routerLink]="['/about', 'sam']">
+  Go to Sam's About Page
+</a>
