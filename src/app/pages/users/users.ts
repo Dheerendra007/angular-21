@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, signal } from '@angular/core';
+import { UserService } from '../../services/user-service';
 
 @Component({
   selector: 'app-users',
@@ -6,4 +7,12 @@ import { Component } from '@angular/core';
   templateUrl: './users.html',
   styleUrl: './users.css',
 })
-export class Users {}
+export class Users {
+  userData:any = signal("");
+  constructor(public userService: UserService) {}
+  ngOnInit() {
+    console.log(this.userService.userList());
+    const data = this.userService.userList();
+    this.userData.set(data);
+  }
+}
