@@ -29,7 +29,7 @@ import { Header } from "./components/header/header";
   imports: [RouterOutlet, Login, Signup, Signal, Signaldatatype,
     Counterapp, Getsetinput, Styling, Controlflowstatement, Controlflowwithloop,
     Switchstatement, Twowaydatabinding, Setterandgetter, Todolist, Directives,
-    Parentcomponent, DisplayCount, ControlCount, Pipe, Home, Login, Profile, About, RouterLinkWithHref, Header],
+    Parentcomponent, DisplayCount, ControlCount, Pipe, Home, Profile, About, Header, RouterLinkWithHref, TrimTextPipePipe],
   templateUrl: './app.html',
   /*template: `
   <h1>{{name}}</h1>
@@ -37,7 +37,7 @@ import { Header } from "./components/header/header";
   <h2>Welcome to {{name}}!</h2>
   <h3>Sum of 10 and 20 is {{getAddition(10, 20)}}</h3>
   `,*/
-  styleUrl: './app.css'
+  styleUrls: ['./app.css']
 })
 export class App {
   protected readonly title = signal('angular-21');

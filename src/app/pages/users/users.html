@@ -1,4 +1,10 @@
 <h1>Users</h1>
+<nav>
+    <a routerLink="setting">Setting 1</a> |
+    <a routerLink="profile">Profile 2</a> |
+
+</nav>
+<router-outlet></router-outlet>
 <ul>
     @for (user of userData(); track user.id) {
      <li>
