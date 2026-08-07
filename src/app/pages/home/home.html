@@ -21,3 +21,6 @@
   [routerLink]="['/about', userData().name]">
   Go to Sam's About Page
 </a>
+<hr>
+<button (click)="loadDynamicComponent()">Load Dynamic Component</button>
+<ng-component #container></ng-component>

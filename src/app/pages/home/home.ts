@@ -1,13 +1,17 @@
-import { Component, signal } from '@angular/core';
+import { Component, signal, ViewChild, ViewContainerRef } from '@angular/core';
 import { Router, RouterLink, RouterModule } from '@angular/router';
+import { Dynamicloading } from '../dynamicloading/dynamicloading';
 
 @Component({
   selector: 'app-home',
-  imports: [RouterLink, RouterModule],
+  imports: [RouterLink, RouterModule,Dynamicloading],
   templateUrl: './home.html',
-  styleUrl: './home.css',
+  styleUrls: ['./home.css'],
 })
 export class Home {
+@ViewChild('container', { read: ViewContainerRef, static: true }) container!: ViewContainerRef;
+
+
   userData = signal({
     name: 'John Doe',
     age: 30,
@@ -24,5 +28,10 @@ export class Home {
       }
     });
   }
-
+  async loadDynamicComponent() {
+    this.container.clear();
+    //const { DynamicComponent } = await import('./dynamicloading/dynamicloading');
+    const { Dynamicloading } = await import('../dynamicloading/dynamicloading');
+    this.container.createComponent(Dynamicloading);
+  }
 }
