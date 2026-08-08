@@ -1,13 +1,17 @@
 import { Component } from '@angular/core';
+import { FormControl, ReactiveFormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-login',
-  imports: [],
+  imports: [ReactiveFormsModule],
   templateUrl: './login.html',
   styleUrl: './login.css',
 })
 export class Login {
   count = 0;
+  email = new FormControl("")
+  password = new FormControl("")
+
   callLogin(action:String) {
     if(action === 'minus') {
       if(this.count  ==0) {
@@ -25,5 +29,9 @@ this.count++;
 
   handelEvent(event: String) {
     console.log('Event:', event);
+  }
+  login() {
+    console.log('Email:', this.email.value);
+    console.log('Password:', this.password.value);
   }
 }
