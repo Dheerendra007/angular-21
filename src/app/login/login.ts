@@ -8,6 +8,7 @@ import { FormControl, ReactiveFormsModule } from '@angular/forms';
   styleUrl: './login.css',
 })
 export class Login {
+
   count = 0;
   email = new FormControl("")
   password = new FormControl("")
@@ -34,4 +35,8 @@ this.count++;
     console.log('Email:', this.email.value);
     console.log('Password:', this.password.value);
   }
+  reset() {
+    this.email.reset();
+    this.password.reset();
+}
 }
