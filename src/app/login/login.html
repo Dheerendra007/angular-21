@@ -21,3 +21,17 @@
 <br />
 <button (click)="login()">Login</button>
 <button (click)="reset()">Reset</button>
+<hr />
+<h1>Reactive Forms</h1>
+<form [formGroup]="loginForm" (ngSubmit)="handleFormSubmit()">
+  <label for="email">Email:</label>
+  <input type="email" id="email" formControlName="userEmail" />
+  <br />
+  <label for="password">Password:</label>
+  <input type="password" id="password" formControlName="userPassword" />
+  <br />
+   <label for="name">Name:</label>
+  <input type="text" id="name" formControlName="userName" />
+  <br />
+  <button type="submit">Submit</button>
+</form>

@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { FormControl, ReactiveFormsModule } from '@angular/forms';
+import { FormControl, FormGroup, ReactiveFormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-login',
@@ -12,6 +12,12 @@ export class Login {
   count = 0;
   email = new FormControl("")
   password = new FormControl("")
+
+  loginForm = new FormGroup({
+    userName: new FormControl(''),
+    userEmail: new FormControl(''),
+    userPassword: new FormControl(''),
+  });
 
   callLogin(action:String) {
     if(action === 'minus') {
@@ -39,4 +45,10 @@ this.count++;
     this.email.reset();
     this.password.reset();
 }
+
+handleFormSubmit() {
+  console.log('Form Submitted:', this.loginForm.value);
+  this.reset(); 
+}
+
 }
