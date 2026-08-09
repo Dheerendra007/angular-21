@@ -1,9 +1,13 @@
-import { Component } from '@angular/core';
+import { Component, signal } from '@angular/core';
 import { FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
+import { form,Field } from '@angular/forms/signals';
+
 
 @Component({
   selector: 'app-login',
-  imports: [ReactiveFormsModule],
+  standalone: true,
+  //imports: [Field],
+ imports: [ReactiveFormsModule],
   templateUrl: './login.html',
   styleUrl: './login.css',
 })
@@ -12,6 +16,11 @@ export class Login {
   count = 0;
   email = new FormControl("")
   password = new FormControl("")
+
+studentLoginModule = signal(
+  {studentEmail: 'abc@test.com', studentPassword: '123456'}
+)
+studentLoginForm = form(this.studentLoginModule)
 
   loginForm = new FormGroup({
     userName: new FormControl('',[Validators.required, Validators.minLength(3)]),
