@@ -33,5 +33,11 @@ export class Home {
     //const { DynamicComponent } = await import('./dynamicloading/dynamicloading');
     const { Dynamicloading } = await import('../dynamicloading/dynamicloading');
     this.container.createComponent(Dynamicloading);
+
+  }
+
+  goToProductPage() {
+    
+    this.router.navigate(['/products']);
   }
 }
