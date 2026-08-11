@@ -7,6 +7,7 @@ import { UserDetails } from './pages/user-details/user-details';
 import { PageNotFound } from './pages/page-not-found/page-not-found';
 import { Setting } from './pages/setting/setting';
 import { Products } from './services/products';
+import { Productsapi } from './pages/productsapi/productsapi';
 
 export const routes: Routes = [
     {path:"",component:Home},
@@ -21,6 +22,6 @@ export const routes: Routes = [
         ]
     },
     {path:"user-details/:id",component:UserDetails},
-        {path:"products/",component:Products},
+        {path:"productsapi/",component:Productsapi},
     {path:"**",component:PageNotFound},
 ];

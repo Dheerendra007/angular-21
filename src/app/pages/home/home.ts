@@ -2,6 +2,7 @@ import { Component, signal, ViewChild, ViewContainerRef } from '@angular/core';
 import { Router, RouterLink, RouterModule } from '@angular/router';
 import { Dynamicloading } from '../dynamicloading/dynamicloading';
 
+
 @Component({
   selector: 'app-home',
   imports: [RouterLink, RouterModule,Dynamicloading],
@@ -18,6 +19,8 @@ export class Home {
     id: 1
   });
   constructor(public router: Router) { }
+
+
   goToAboutPage() {
     
     this.router.navigate(['/about', this.userData().name], {
@@ -36,8 +39,4 @@ export class Home {
 
   }
 
-  goToProductPage() {
-    
-    this.router.navigate(['/products']);
-  }
 }
