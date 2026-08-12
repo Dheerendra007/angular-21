@@ -22,6 +22,6 @@ export const routes: Routes = [
         ]
     },
     {path:"user-details/:id",component:UserDetails},
-        {path:"productsapi/",component:Productsapi},
+        {path:"productsapi",component:Productsapi},
     {path:"**",component:PageNotFound},
 ];

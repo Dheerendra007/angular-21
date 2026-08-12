@@ -1,1 +1,12 @@
 <h1>Products API</h1>
+<ul>
+   @for (productd of productsData(); track productd.id){
+    <li>
+      <h2>{{productd.title}}</h2>
+      <p>{{productd.description}}</p>
+      <p>Price: {{productd.price}}</p>
+    </li>
+   }
+
+  
+</ul>

@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, signal } from '@angular/core';
 import { Products } from '../../services/products';
 
 @Component({
@@ -8,10 +8,12 @@ import { Products } from '../../services/products';
   styleUrl: './productsapi.css',
 })
 export class Productsapi {
+  productsData = signal<any[]>([]);
   constructor(private productService: Products) { }
   ngOnInit() {
     this.productService.getProducts().subscribe((data) => {
       console.log(data);
+      this.productsData.set(data);
     });
   }
 }
