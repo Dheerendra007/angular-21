@@ -1,5 +1,6 @@
 import { Component, signal } from '@angular/core';
 import { Products } from '../../services/products';
+import { ProductAPI } from '../../interfaces/product-api';
 
 @Component({
   selector: 'app-productsapi',
@@ -8,7 +9,7 @@ import { Products } from '../../services/products';
   styleUrl: './productsapi.css',
 })
 export class Productsapi {
-  productsData = signal<any[]>([]);
+  productsData = signal<ProductAPI[]>([]);
   constructor(private productService: Products) { }
   ngOnInit() {
     this.productService.getProducts().subscribe((data) => {
