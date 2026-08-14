@@ -1,0 +1,8 @@
+<h1>product-details works!</h1>
+@if (productValue(); as product) {
+  <h2>{{ product.title }}</h2>
+
+  <img [src]="productValue().images[0]" [alt]="productValue().title">
+} @else {
+  <p>Product not found</p>
+}
