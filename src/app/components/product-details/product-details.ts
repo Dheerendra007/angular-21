@@ -1,10 +1,11 @@
 import { Component, signal } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Products } from '../../services/products';
+import { MatSlideToggle } from '@angular/material/slide-toggle';
 
 @Component({
   selector: 'app-product-details',
-  imports: [],
+  imports: [MatSlideToggle],
   templateUrl: './product-details.html',
   styleUrl: './product-details.css',
 })
