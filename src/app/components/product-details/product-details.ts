@@ -5,10 +5,13 @@ import { MatSlideToggle } from '@angular/material/slide-toggle';
 import { MatButtonModule } from '@angular/material/button';
 import { MatDividerModule } from '@angular/material/divider';
 import { MatIconModule } from '@angular/material/icon';
+import { MatDatepickerModule } from '@angular/material/datepicker';
+import { MatInputModule } from '@angular/material/input';
+import { MatFormFieldModule } from '@angular/material/form-field';
 
 @Component({
   selector: 'app-product-details',
-  imports: [MatButtonModule, MatDividerModule, MatIconModule, MatSlideToggle],
+  imports: [MatButtonModule, MatDividerModule, MatIconModule, MatSlideToggle,MatDatepickerModule,MatFormFieldModule, MatInputModule],
   templateUrl: './product-details.html',
   styleUrl: './product-details.css',
 })
